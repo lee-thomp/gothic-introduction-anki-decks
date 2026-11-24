@@ -1,0 +1,7 @@
+| Case | Singular | Plural |
+|------+----------+--------|
+| N    | dags     | dagos  |
+| G    | dagis    | dage   |
+| D    | daga     | dagam  |
+| A    | dag      | dagans |
+| V    | dag      | ---    |

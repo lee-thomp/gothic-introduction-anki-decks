@@ -1,0 +1,23 @@
+| Gothic          | English                        | Notes             |
+|-----------------+--------------------------------+-------------------|
+| akrs            | cultivated field               | sm                |
+| þuidans         | king                           | sm                |
+| stains          | stone                          | sm                |
+| sitls           | nest; seat; stall              | sm                |
+| himins          | heaven, the sky                | sm                |
+| winds           | wind; cardinal point           | sm                |
+| wair            | man, person                    | sm                |
+| bagms           | tree                           | sm                |
+| wigs            | road, path, way (lit. or fig.) | sm                |
+| hlaifs, hlaibis | bread, loaf                    | sm                |
+| fugls           | bird, fowl                     | sm                |
+| fisks           | fish                           | sm                |
+| jah             | and                            | conj              |
+| skalks          | slave, servant (= Gk δoῦλος)   | sm                |
+| asts            | branch                         | sm                |
+| hunds           | dog                            | sm                |
+| laufs, laubis   | leaf, foliage                  | sm                |
+| ligrs           | bed                            | sm                |
+| wulfs           | wolf                           | sm                |
+| hwar            | where?                         | interrogative adv |
+

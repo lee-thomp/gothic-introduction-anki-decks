@@ -1,0 +1,7 @@
+| Case | Singular  | Plural     |
+|------+-----------+------------|
+| N    | frehals   | frehalsos  |
+| G    | frehalsis | frehalse   |
+| D    | frehalsa  | frehalsam  |
+| A    | frehals   | frehalsans |
+| V    | frehals   | ---        |

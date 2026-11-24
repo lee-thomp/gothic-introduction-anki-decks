@@ -1,0 +1,10 @@
+| Preposition + Noun Case | Meaning                                                                                                                                                                            |
+|-------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| in + G                  | (1) about, concerning; (2) on account of, because of                                                                                                                               |
+| in + D                  | (1) in, on (static location); (2) in (a state or position); (3) in, at, during (a time period); (4) (motion) into, onto                                                            |
+| in + A                  | (motion) into, onto                                                                                                                                                                |
+| du + D                  | to (a person or place; after verbs of motion, speaking, giving, praying, etc.)                                                                                                     |
+| fram + D                | (1) by, through the agency of (often after a passive verb); (2) (motion) from (a place or person); (3) from, since (a point in time); (4) partitive after numbers, e.g. (three) of |
+| ana + D                 | (static location) on (a surface or object), in (a circumscribed area, e.g. a field)                                                                                                |
+| ana + A                 | (motion or placing) onto (a surface), into (an area)                                                                                                                               |
+| us + D                  | (1) out of, from (place, source, origin); (2) from, since (a period of time)                                                                                                       |

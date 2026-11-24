@@ -1,0 +1,23 @@
+| Gothic                | English                         |
+|-----------------------+---------------------------------|
+| in fugle himinis      | about/because of heaven's birds |
+| in þamma sitla        | on that seat                    |
+| ana þamma akra        | in the field                    |
+| ana þaim bagmam       | on the trees                    |
+| fram þaim wigam       | from these roads                |
+| us himina             | out of heaven                   |
+| du þamma þiudana      | to the king                     |
+| ana asta þis bagmis   | on the tree's branch            |
+| ana þana akr          | into that field                 |
+| in himinans           | into (the) heavens              |
+| in hunde jah wulfe    | concerning dogs and wolves      |
+| in hlaibis jah fiskis | about (a) load and (a) fish     |
+| du þaim wairam        | to the men                      |
+| du himinam            | to (the) heavens                |
+| ana þamma staina      | on that stone                   |
+| fram þaim bagmam      | (away) from these trees         |
+| in wigans jah akrans  | into roads and fields           |
+| ana sitla þis fulgis  | in the bird's nest              |
+| us wigam jah akram    | from roads and fields           |
+| us þaim stainam       | out of the stones               |
+| fram þamma hunda      | by that dog                     |

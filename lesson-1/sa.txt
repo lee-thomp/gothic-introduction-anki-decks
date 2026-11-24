@@ -1,0 +1,6 @@
+| Case | Singular | Plural |
+|------+----------+--------|
+| N    | sa       | þai    |
+| G    | þis      | þize   |
+| D    | þamma    | þaim   |
+| A    | þana     | þans   |

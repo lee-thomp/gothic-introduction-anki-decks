@@ -1,0 +1,14 @@
+| Gothic            | English            |
+|-------------------+--------------------|
+| akros þiudanis    | a king's fields    |
+| astos bagmis      | a tree's branches  |
+| fuglos himine     | heaven's birds     |
+| asts bagmis       | a tree's branch    |
+| skalks þiudanis   | a king's servant   |
+| hunds þis skalkis | the slave's dog    |
+| stainos þis akris | the field's stones |
+| skalks þis wairis | the man's slave    |
+| laufs þis bagmis  | the tree's leaf    |
+| sitls þize fugle  | nest of the birds  |
+| ligrs þis skalkis | the slave's bed    |
+| hundos jah wulfos | dogs and wolves    |

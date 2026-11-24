@@ -1,0 +1,7 @@
+| Case | Singular | Plural   |
+|------+----------+----------|
+| N    | hlaifs   | hlaibos  |
+| G    | hlaibis  | hlaibe   |
+| D    | hlaiba   | hlaibam  |
+| A    | hlaif    | hlaibans |
+| V    | hlaif    | ---      |
