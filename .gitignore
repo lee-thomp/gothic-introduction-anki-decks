@@ -1,1 +1,11 @@
 *.tsv
+
+.venv/
+__pycache__/
+build/
+*.egg-info/
+*.apkg
+/bin/
+/lib/
+/lib64
+/pyvenv.cfg
