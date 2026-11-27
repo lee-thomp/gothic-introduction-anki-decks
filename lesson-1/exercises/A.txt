@@ -1,9 +1,9 @@
 | Gothic                     | English                          |
 |----------------------------+----------------------------------|
-| þai hlabos                 | the bread, loaves                |
+| þai hlaibos                | the bread/loaves                 |
 | sa wulfs                   | the wolf                         |
-| sa wair                    | the man                          |
-| þai skalkos                | the slaves, servants             |
+| sa wair                    | the man/person                   |
+| þai skalkos                | the slaves/servants              |
 | þai astos                  | the branches                     |
 | sa hunds                   | the dog                          |
 | sa wigs                    | the road, path                   |
