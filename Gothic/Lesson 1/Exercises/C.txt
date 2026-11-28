@@ -17,7 +17,7 @@
 | ana þamma staina      | on that stone                   |
 | fram þaim bagmam      | (away) from these trees         |
 | in wigans jah akrans  | into roads and fields           |
-| ana sitla þis fulgis  | in the bird's nest              |
+| ana sitla þis fuglis  | in the bird's nest              |
 | us wigam jah akram    | from roads and fields           |
 | us þaim stainam       | out of the stones               |
 | fram þamma hunda      | by that dog                     |

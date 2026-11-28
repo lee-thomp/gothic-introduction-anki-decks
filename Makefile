@@ -4,22 +4,23 @@ venv := $(if $(wildcard .venv/bin/python),.venv,.)
 python := $(venv)/bin/python
 hy2py := $(venv)/bin/hy2py
 
-sources := $(sort $(wildcard lesson-1/*.txt lesson-1/*/*.txt))
-tsvs := $(sources:.txt=.tsv)
-# Directory mtimes also catch removals from the wildcard source list.
-source_dirs := $(wildcard lesson-1/ lesson-1/*/)
+# The substitution here gets around some awkward handling of spaces in file
+# names within Make
+sources := $(subst Lesson 1,Lesson\ 1,$(wildcard Gothic/*.txt Gothic/*/*.txt Gothic/*/*/*.txt))
+tsvs := $(subst .txt,.tsv,$(sources))
+# Directory mtimes also catch removals from the wildcard source list
+source_dirs := $(subst Lesson 1,Lesson\ 1,$(wildcard Gothic/ Gothic/*/ Gothic/*/*/))
 
 .PHONY: all
-all: lesson-1.apkg
+all: Gothic.apkg
 
 %.tsv: %.txt org-table-anki.el table-to-tsv.sh
 	./table-to-tsv.sh "$<" "$@"
 
-# Currently Hy 1.3.1 has issues running against Python 3.12.6 —this step gets
-# around that for now.
+# Hy 1.3.1's file runner fails with Python 3.12.3; hy2py avoids that path.
 build/build_anki.py: build_anki.hy
 	mkdir -p $(@D)
 	$(hy2py) --output "$@" "$<"
 
-lesson-1.apkg: $(tsvs) $(source_dirs) build/build_anki.py anki.css
+Gothic.apkg: $(tsvs) $(source_dirs) build/build_anki.py anki.css
 	$(python) build/build_anki.py -o "$@" $(tsvs)

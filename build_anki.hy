@@ -173,11 +173,12 @@
 
 ;; Keys describe paths relative to the project root. A "*" matches one TSV stem.
 (setv deck-map
-      {"lesson-1"
-       {"declensions" {"*" declension}
-        "exercises" {"*" exercise}
-        "prepositions" preposition
-        "vocabulary" vocabulary}})
+      {"Gothic"
+       {"Lesson 1"
+        {"Declensions" {"*" declension}
+         "Exercises" {"*" exercise}
+         "Prepositions" preposition
+         "Vocabulary" vocabulary}}})
 
 (defn handler-for [path]
   (let [node deck-map]
