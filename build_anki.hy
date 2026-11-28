@@ -4,17 +4,9 @@
 (import pathlib [Path])
 (import genanki)
 
-(require hyrule [->])
+(require hyrule [-> unless])
 
-(setv css "
-.card { font-family: sans-serif; font-size: 22px; text-align: center; }
-.notes { font-size: 0.7em; opacity: 0.75; margin: 0.5em 0; }
-.translation { margin-top: 0.5em; }
-.declension { border-collapse: collapse; margin: 0 auto; }
-.declension th, .declension td { border: 1px solid #888; padding: 0.35em 0.7em; }
-.declension .gap { font-weight: bold; }
-.declension strong { text-decoration: underline; }
-")
+(setv css (.read_text (Path "anki.css") :encoding "utf-8"))
 
 (defn stable-id [kind name]
   "Return a stable, nonzero signed 64-bit ID for a model or deck."
@@ -32,37 +24,44 @@
 (defn deck-id [name] (stable-id "deck" name))
 
 (defclass TSV []
+
   (defn __init__ [self path]
-    (setv self.path (Path path))
-    (with [stream (.open self.path :encoding "utf-8-sig" :newline "")]
-      (setv separator-line (next stream None)
-            columns-line (next stream None))
-      (when (or (is separator-line None)
-                (not (.startswith separator-line "#separator:")))
-        (raise (ValueError f"{self.path}: expected #separator: header")))
-      (when (or (is columns-line None)
-                (not (.startswith columns-line "#columns:")))
-        (raise (ValueError f"{self.path}: expected #columns: header")))
-      (setv separator-name (.strip (.removeprefix separator-line "#separator:"))
-            self.separator (.get {"tab" "\t"
-                                  "comma" ","
-                                  "semicolon" ";"
-                                  "pipe" "|"
-                                  "space" " "
-                                  "colon" ":"}
-                                 separator-name separator-name))
-      (when (!= (len self.separator) 1)
-        (raise (ValueError f"{self.path}: invalid separator {separator-name!r}")))
-      (setv self.columns (next (csv.reader
+    (with [stream (.open (Path path) :encoding "utf-8-sig" :newline "")]
+      (let [separator-line (next stream None)
+            columns-line   (next stream None)
+            separator-line-valid? (and separator-line
+                                       (.startswith separator-line "#separator:"))
+            columns-line-valid?   (and columns-line
+                                       (.startswith columns-line "#columns:"))]
+        (unless separator-line-valid?
+          (raise (ValueError f"{path}: expected #separator: header")))
+        (unless columns-line-valid?
+          (raise (ValueError f"{path}: expected #columns: header")))
+        (let [separator-name (-> separator-line
+                                 (.removeprefix "#separator:")
+                                 (.strip))
+              separator-char (.get {"tab" "\t"
+                                    "comma" ","
+                                    "semicolon" ";"
+                                    "pipe" "|"
+                                    "space" " "
+                                    "colon" ":"} separator-name None)]
+          (unless separator-char
+            (raise (ValueError f"{path}: invalid separator {separator-name!r}")))
+          (let [columns (next (csv.reader
                                 [(.removeprefix columns-line "#columns:")]
-                                :delimiter self.separator))
-            self.rows (list (csv.reader stream :delimiter self.separator))))
-    (when (not self.rows)
-      (raise (ValueError f"{self.path}: no data rows")))
-    (for [[number row] (enumerate self.rows 3)]
-      (when (!= (len row) (len self.columns))
-        (raise (ValueError
-                 f"{self.path}:{number}: expected {(len self.columns)} columns, got {(len row)}"))))))
+                                :delimiter separator-char))
+                rows (list (csv.reader stream :delimiter separator-char))]
+            (unless rows
+              (raise (ValueError f"{path}: no data rows")))
+            (for [[number row] (enumerate rows 3)]
+              (when (!= (len row) (len columns))
+                (raise
+                  (ValueError f"{path}:{number}: expected {(len columns)} columns, got {(len row)}"))))
+            (setv self.path path
+                  self.columns columns
+                  self.rows rows)))))
+    ))
 
 (setv vocabulary-model
       (genanki.Model

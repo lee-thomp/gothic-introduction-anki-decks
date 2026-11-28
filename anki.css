@@ -1,0 +1,32 @@
+.card {
+    font-family: sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.notes {
+    font-size: 0.7em;
+    opacity: 0.75;
+    margin: 0.5em 0;
+}
+
+.translation {
+    margin-top: 0.5em;
+}
+
+.declension {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.declension th, .declension td {
+    border: 1px solid #888;
+    padding: 0.35em 0.7em; }
+
+.declension .gap {
+    font-weight: bold;
+}
+
+.declension strong {
+    text-decoration: underline;
+}

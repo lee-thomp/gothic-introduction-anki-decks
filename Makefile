@@ -21,5 +21,5 @@ build/build_anki.py: build_anki.hy
 	mkdir -p $(@D)
 	$(hy2py) --output "$@" "$<"
 
-lesson-1.apkg: $(tsvs) $(source_dirs) build/build_anki.py
+lesson-1.apkg: $(tsvs) $(source_dirs) build/build_anki.py anki.css
 	$(python) build/build_anki.py -o "$@" $(tsvs)
